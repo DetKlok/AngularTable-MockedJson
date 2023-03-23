@@ -1,0 +1,14 @@
+<mat-dialog-content>
+  <form [formGroup]="tableRowForm" class="example-form">
+    <ng-container *ngFor="let field of data">
+      <mat-form-field *ngIf="field != 'Remove'">
+        <mat-label>{{field | camelCaseTransform}}</mat-label>
+        <input matInput value="" [type]="tableService.getInputType(field)" [placeholder]="field" [formControlName]="field">
+      </mat-form-field>
+    </ng-container>
+    <div class="btn-wrapper">
+      <button mat-flat-button color="primary" type="submit" [mat-dialog-close]="tableRowForm.value">Submit</button>
+      <button mat-flat-button color="warn" mat-dialog-close>Cancel</button>
+    </div>
+  </form>
+</mat-dialog-content>

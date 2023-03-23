@@ -1,0 +1,16 @@
+.mat-mdc-form-field{
+  display: inline-flex;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.btn-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  button {
+    margin: 15px;
+  }
+}
